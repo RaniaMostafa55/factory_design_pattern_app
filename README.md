@@ -4,13 +4,11 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project applies factory design pattern as following:
+- An abstract class called "Shape" with "revealMe" method with no implementation
+- Three classes called "Square", "Rectangle" and "Circle" inherited from class "Shape" and implemented "revealMe" method
+- Class "ShapeMaker" with "selectShape" method, it takes the shape name and returns an object of the same type
+- Class "ShapePrinter" with "createShape" method, it creates an object from "ShapeMaker" to use "selectShape" method with a certain shape type passed to it
+- This method checks if the shape type exists, it calls the "revealMe" method, if it doesn't, it prints a sentence saying that
+- In the main function, an object of type "ShapePrinter" was created
+- This object was created to call "createShape" to test the app with different shapes
